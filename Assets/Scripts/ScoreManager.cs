@@ -7,6 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager scoreManager;
     [SerializeField] private TextMeshProUGUI scoreUI;
+    [SerializeField] private TextMeshProUGUI Messages;
     public int totalscore = 0;
     public bool gameActive = true;
 
@@ -43,6 +44,18 @@ public class ScoreManager : MonoBehaviour
         {
             totalscore += score;
             scoreUI.text = "Score: " + totalscore.ToString();
+            if(totalscore > 10 && totalscore < 25)
+            {
+                Messages.text = "Cantastic!";
+            }
+            else if(totalscore > 24 && totalscore < 35)
+            {
+                Messages.text = "Sugar Crazy!";
+            }
+            if(totalscore > 34)
+            {
+                Messages.text = "Mucho Cando!";
+            }
         }
     }
 }

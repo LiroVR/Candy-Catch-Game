@@ -37,7 +37,7 @@ public class CandyManager : MonoBehaviour
     public void Spawn()
     {
         Vector3 position = new Vector3(Random.Range(-6.0F, 6.0F), 6f, 0f);
-        int candyNum = Random.Range(0, 22);
+        int candyNum = Random.Range(0, 21);
         Rigidbody2D candy = Instantiate(candyArray[candyNum], position, Quaternion.identity).GetComponent<Rigidbody2D>();
         candy.simulated = true;
         waitValue = Random.Range (1, 4);
